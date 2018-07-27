@@ -13,13 +13,28 @@
         console.log('Before answering the first question');
         var q1 = prompt('What country I was born in?');
         if(q1 == a1){
-            var printAnswer = document.write('Good job, you are right!');
+            var printAnswer = document.write('Q1: Good job, you are right!<br>');
             console.log('The user answer correct the first question');
         } else {
-            var printAnswer = document.write('You are wrong, please try again.');
+            var printAnswer = document.write('Q1: You are wrong, please try again. <br>');
             console.log('The user is wrong');
         }
         
+        // Second question markup
+        var a2 = "Cookie";
+        console.log('Moving to Q num 2');
+        var q2;
+        q2 = prompt("What's your dog name?");
+
+        if(q2 == a2) {
+            document.write("Q2: Nice job, you are doing good!<br>");
+            console.log('The user answer correct the first question');
+        } else {
+            document.write("Q2: Wrong guess, maybe next time<br>");
+            console.log('The user is wrong');
+        }
+
+
 
     </script>
 </head>

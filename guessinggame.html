@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <script>
+    <!-- <script>
         // First question markup
         var a1 = "Israel";
         var q1;
         console.log('Before answering the first question');
         var q1 = prompt('What country I was born in?');
-        if(q1 == a1){
+        var capFirstLetter = q1.charAt(0).toUpperCase() + q1.substr(1);
+        if(capFirstLetter == a1){
             var printAnswer = document.write('Q1: Good job, you are right!<br>');
             console.log('The user answer correct the first question');
         } else {
@@ -25,8 +26,9 @@
         console.log('Moving to Q num 2');
         var q2;
         q2 = prompt("What's your dog name?");
+        var capFirstLetter = q2.charAt(0).toUpperCase() + q2.substr(1);
 
-        if(q2 == a2) {
+        if(capFirstLetter == a2) {
             document.write("Q2: Nice job, you are doing good!<br>");
             console.log('The user answer correct the first question');
         } else {
@@ -39,7 +41,8 @@
         console.log("Display the third question");
         var q3;
         q3 = prompt("What's your favorite color?");
-        if(q3 == a3) {
+        var capFirstLetter = q3.charAt(0).toUpperCase() + q3.substr(1);
+        if(capFirstLetter == a3) {
             document.write("Q3: This is the right answer!");
             console.log('The user answer correct the first question');
         } else {
@@ -47,10 +50,79 @@
             console.log('The user is wrong');
         }
 
-
-    </script>
+    </script> -->
 </head>
 <body>
-    <script>//document.write(printAnswer)</script>
+    <main>
+        <div class="intro">
+            <h1>About Me</h1>
+            <h2>Hi, my name is Ido Moskovits. Welcome to my page.</h2>
+        </div>
+        <div class="Israel">
+            <p>I was born and raised in <a href="https://en.wikipedia.org/wiki/Israel" target="_blank">Israel</a>. I came to the U.S in 2010 after I served 3 years in the IDF (The Israel army).</p>
+        </div>
+        <div class="US">
+            <h2>I lived in 4 states in the U.S (in this order)</h2>
+            <ol>
+                <li>Minnesota</li>
+                <li>Michigan</li>
+                <li>Back to Minnesota (You Betcha!)</li>
+                <li>Illinois</li>
+                <li>Oregon</li>
+            </ol>
+            <div class="funFact">
+                <h2>Fun Fact:</h2>
+                <p>Oregon is TWELVE times bigger than Israel!</p>
+                <img src="http://i44.photobucket.com/albums/f35/idomosko/Israel%20size%20compared%20to%20Oregon_zps2uzjqwnc.png" alt="Israel size">
+            </div>
+        </div>
+        <div class="hobbies">
+            <h2>Here are some of the things that I like to do:</h2>
+            <ul>
+                <li>I love to play poker! If you like it too let me know!</li>
+                <li>Snowboarding! (In 2010, before I came to the US, I lived 5 months in Whistler, Canada, and I got my snowboard instructor certificate.</li>
+                <li>Soccer (I play indoor soccer twice a week)</li>
+                <li>Like to watch UFC (I also go to a live UFC event one a year)</li>
+            </ul>
+        </div>
+        <div class="pets">
+            <h2>My Pets:</h2>
+            <div class="petsList">
+                <div><h3>Cookie</h3><img src="http://i44.photobucket.com/albums/f35/idomosko/ab66eb54-4335-4011-931e-a1e338ef0698_zpshf7olmie.jpg" alt="Cookie"></div>
+                <div style="margin: 0 10px;"><h3>Chuck</h3><img src="http://i44.photobucket.com/albums/f35/idomosko/ab66eb54-4335-4011-931e-a1e338ef0698_zpshf7olmie.jpg" alt="Chuck"></div>
+                <div><h3>Larry</h3><img src="http://i44.photobucket.com/albums/f35/idomosko/IMG_0051_zpsmz2jbl2w.jpg" alt="Larry"></div>
+            </div>
+        </div>
+    </main>
+    
+<style>
+        body p {
+            font-size: 18px;
+        }
+        main {
+           max-width: 768px;
+           margin: auto; 
+        }
+        img {
+            max-width: 100%;
+        }
+        .funFact {
+            background-color: aliceblue;
+            padding: 10px;
+            text-align: center;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+        }
+        .funFact h2{
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        .petsList {
+            display: flex;
+        }
+        .petsList div {
+            width: 100%;
+        }
+    </style>
 </body>
 </html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Me</title>
+
+        <script>
+        // First question markup
+        var a1 = "Israel";
+        var q1;
+        console.log('Before answering the first question');
+        var q1 = prompt('What country I was born in?');
+        var capFirstLetter = q1.charAt(0).toUpperCase() + q1.substr(1);
+        if(capFirstLetter == a1){
+            var printAnswer = document.write('Q1: Good job, you are right!<br>');
+            console.log('The user answer correct the first question');
+        } else {
+            var printAnswer = document.write('Q1: You are wrong, please try again. <br>');
+            console.log('The user is wrong');
+        }
+        
+        // Second question markup
+        var a2 = "Cookie";
+        console.log('Moving to Q num 2');
+        var q2;
+        q2 = prompt("What's your dog name?");
+        var capFirstLetter = q2.charAt(0).toUpperCase() + q2.substr(1);
+
+        if(capFirstLetter == a2) {
+            document.write("Q2: Nice job, you are doing good!<br>");
+            console.log('The user answer correct the first question');
+        } else {
+            document.write("Q2: Wrong guess, maybe next time<br>");
+            console.log('The user is wrong');
+        }
+
+        // Third question markup
+        var a3 = "Blue";
+        console.log("Display the third question");
+        var q3;
+        q3 = prompt("What's your favorite color?");
+        var capFirstLetter = q3.charAt(0).toUpperCase() + q3.substr(1);
+        if(capFirstLetter == a3) {
+            document.write("Q3: This is the right answer!");
+            console.log('The user answer correct the first question');
+        } else {
+            document.write("Q3: No, it is blue!!!");
+            console.log('The user is wrong');
+        }
+
+    </script>
+</head>
+<body>
+    <main>
+        <h1 style="text-align: center;">About Me</h1>
+        <div class="intro">
+            <div><h2>Hi, my name is Ido Moskovits. Welcome to my page.</h2>
+            <p>I was born and raised in <a href="https://en.wikipedia.org/wiki/Israel" target="_blank">Israel</a>.</p>
+            </div>
+            <img src="http://i44.photobucket.com/albums/f35/idomosko/Ido_zps4f9a2fsw.jpg" alt="Ido">
+        </div>
+        <div class="Israel">
+        </div>
+        <div class="funFact">
+            <p>Fun fact:<br>Oregon is TWELVE times bigger than Israel!</p>
+            <img src="http://i44.photobucket.com/albums/f35/idomosko/Israel%20size%20compared%20to%20Oregon_zps2uzjqwnc.png" alt="Israel size">
+        </div>
+        <div class="US">
+            <h2>I lived in 4 states in the U.S (in this order)</h2>
+            <ol>
+                <li>Minnesota</li>
+                <li>Michigan</li>
+                <li>Back to Minnesota (You Betcha!)</li>
+                <li>Illinois</li>
+                <li>Oregon</li>
+            </ol>
+        </div>
+        <div class="hobbies">
+            <h2>Here are some of my hobbies:</h2>
+            <ul>
+                <li>I love to play poker! If you like it too let me know!</li>
+                <li>Snowboarding! (In 2010, before I came to the US, I lived 5 months in Whistler, Canada, and I got my snowboard instructor certificate.</li>
+                <li>Soccer (I play indoor soccer twice a week)</li>
+                <li>Like to watch UFC (I also go to a live UFC event one a year)</li>
+            </ul>
+        </div>
+        <div class="pets">
+            <h2>My Pets:</h2>
+            <div class="petsList">
+                <div><h3>Cookie</h3><img src="http://i44.photobucket.com/albums/f35/idomosko/IMG_1912_zpspn0rud4b.jpg" alt="Cookie"></div>
+                <div style="margin: 0 10px;"><h3>Chuck</h3><img src="http://i44.photobucket.com/albums/f35/idomosko/IMG_0807_zps3a9ehrcd.jpg" alt="Chuck"></div>
+                <div><h3>Larry</h3><img src="http://i44.photobucket.com/albums/f35/idomosko/IMG_0051_zpsmz2jbl2w.jpg" alt="Larry"></div>
+            </div>
+        </div>
+    </main>
+    
+<style>
+        body {
+            background-color: #e9e9e9;
+        }
+        body p {
+            font-size: 18px;
+        }
+        main {
+           max-width: 768px;
+           margin: auto; 
+           background-color: white;
+           padding: 20px;
+        }
+        img {
+            max-width: 100%;
+        }
+        .intro {
+            display: flex;
+            position: relative;
+            align-items: center;
+        }
+        .intro h2 {
+            font-size: 30px;
+        }
+        .intro div, .intro img {
+            width: 50%;
+            height: auto;
+        }
+        .funFact {
+            background-color: aliceblue;
+            padding: 10px;
+            text-align: center;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+        }
+        .funFact p {
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .petsList {
+            display: flex;
+        }
+        .petsList div {
+            width: 100%;
+        }
+    </style>
+</body>
+</html>

@@ -6,48 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Me</title>
 
-        <script>
+    <script>
+        var rightFeedback = "Thats the right answer, great job!";
+        var wrongFeedback = "Wrong answer, please try again";
+        var rightAnswerCounter = 0;
         // First question markup
-        var a1 = "Israel";
-        var q1;
-        console.log('Before answering the first question');
-        var q1 = prompt('What country I was born in?');
-        var capFirstLetter = q1.charAt(0).toUpperCase() + q1.substr(1);
-        if(capFirstLetter == a1){
-            var printAnswer = document.write('Q1: Good job, you are right!<br>');
-            console.log('The user answer correct the first question');
-        } else {
-            var printAnswer = document.write('Q1: You are wrong, please try again. <br>');
-            console.log('The user is wrong');
-        }
-        
-        // Second question markup
-        var a2 = "Cookie";
-        console.log('Moving to Q num 2');
-        var q2;
-        q2 = prompt("What's your dog name?");
-        var capFirstLetter = q2.charAt(0).toUpperCase() + q2.substr(1);
-
-        if(capFirstLetter == a2) {
-            document.write("Q2: Nice job, you are doing good!<br>");
-            console.log('The user answer correct the first question');
-        } else {
-            document.write("Q2: Wrong guess, maybe next time<br>");
-            console.log('The user is wrong');
+        function qNumberOne() {
+            var answer = "israel";
+            var question = prompt('What country I was born in?');
+            console.log('Before answering the first question');
+            //var capFirstL etter = question.charAt(0).toUpperCase() + question.substr(1);
+            if(question.toLowerCase() == answer){
+                alert(rightFeedback);
+                rightAnswerCounter ++;
+                console.log('The user answer correct the first question');
+            } else {
+                   alert(wrongFeedback);
+            }
         }
 
-        // Third question markup
-        var a3 = "Blue";
-        console.log("Display the third question");
-        var q3;
-        q3 = prompt("What's your favorite color?");
-        var capFirstLetter = q3.charAt(0).toUpperCase() + q3.substr(1);
-        if(capFirstLetter == a3) {
-            document.write("Q3: This is the right answer!");
-            console.log('The user answer correct the first question');
-        } else {
-            document.write("Q3: No, it is blue!!!");
-            console.log('The user is wrong');
+        function qNumberTwo() {
+            var answer = "yes";
+            var shortAnswer = answer.charAt(0);
+            var question = prompt("Does my dog name is Cookie?");
+
+            if(question.toLowerCase() == answer || question.toLowerCase() == shortAnswer) {
+                alert(rightFeedback);  
+                rightAnswerCounter ++;
+            } else {
+                alert(wrongFeedback);  
+            }
+        }
+
+        function qNumberThree() {
+            var answer = 8;
+            var question = prompt("Choose a number between 0 to 20");
+            while(question != answer) {
+                if(question < answer) {
+                    question = prompt("choose a higher number");
+                } else {
+                    question = prompt("choose a lower number");
+                }
+            }
+            alert("Bullseye!!!");
+        }
+
+        function quizScore() {
+            alert(rightAnswerCounter);
         }
 
     </script>
@@ -58,6 +63,7 @@
         <div class="intro">
             <div><h2>Hi, my name is Ido Moskovits. Welcome to my page.</h2>
             <p>I was born and raised in <a href="https://en.wikipedia.org/wiki/Israel" target="_blank">Israel</a>.</p>
+            <button onclick="qNumberOne()">Trivia question number one</button>
             </div>
             <img src="http://i44.photobucket.com/albums/f35/idomosko/Ido_zps4f9a2fsw.jpg" alt="Ido">
         </div>
@@ -93,7 +99,12 @@
                 <div style="margin: 0 10px;"><h3>Chuck</h3><img src="http://i44.photobucket.com/albums/f35/idomosko/IMG_0807_zps3a9ehrcd.jpg" alt="Chuck"></div>
                 <div><h3>Larry</h3><img src="http://i44.photobucket.com/albums/f35/idomosko/IMG_0051_zpsmz2jbl2w.jpg" alt="Larry"></div>
             </div>
+            <button onclick="qNumberTwo()">Start the pet quiz</button>
         </div>
+        
+        <button onclick="qNumberThree()">Choose a number</button>
+        <button onclick="quizScore()">Check your score</button>
+        
     </main>
     
 <style>

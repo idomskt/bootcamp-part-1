@@ -1,10 +1,13 @@
-
         body {
             background-color: #e9e9e9;
             margin: 0;
         }
         body p {
             font-size: 18px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
         }
         .outer {
             padding: 20px;
@@ -19,15 +22,13 @@
             border-bottom: 3px solid #1b1b94;
             padding: 12px;
         }
-        header .inner, header ul {
-            display: flex;
+        header .inner, header ul, .stateName {
             align-items: center;
         }
         nav {
             display: inline-block;
         }
         header ul {
-            list-style: none;
             width: 500px;
         }
         header ul li {
@@ -61,27 +62,65 @@
             height: auto;
         }
         .funFact {
-            background-color: aliceblue;
-            text-align: center;
-            border-top: 3px solid black;
-            border-bottom: 3px solid black;
+            background-image: url(http://i44.photobucket.com/albums/f35/idomosko/Israel%20size%20compared%20to%20Oregon_zps2uzjqwnc.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
         }
-        .funFact p {
+        .background-overlay {
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: darkblue;
+            opacity: 0.8;
+        }
+        .funFact h2 {
             font-weight: bold;
-            font-size: 30px;
+            font-size: 50px;
+            padding: 150px 0;
+            color: white;
+            text-align: center;
         }
-        .US .inner ul, .petsList {
+        .petsList div, .quizQues div {
+            width: 100%;
+        }
+        header .inner, header ul, .US .inner ul, .petsList, .quizQues, .stateName, .hobbies ul {
             display: flex;
         }
-        .US {
+        .quiz, .hobbies {
             text-align: center;
         }
-        .US .inner ul {
-            list-style: none;
+        .stateName {
+            max-width: 768px;
+            margin: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            border-bottom: 3px solid black;
         }
-        .US .inner ul li {
-            width: 100%;
+        .US h2, .hobbies h2 {
+            font-size: 50px;
+            text-align: center;
         }
-        .petsList div {
-            width: 100%;
+        .stateName .image {
+            width: 30%;
+            text-align: center;
+        }
+        .stateName img {
+            width: 100px;
+        }
+        .stateName .text {
+            width: 70%;
+        }
+        .hobbies {
+            background-color: aliceblue;
+        }
+        .hobbies ul li {
+            width: 25%;
+            padding: 15px;
+        }
+        .hobbies img {
+            max-width: 60%;
         }

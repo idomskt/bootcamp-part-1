@@ -46,35 +46,33 @@ function quizScore() {
 
 // ============================== Class 04 - Continue guessing game ====================================
 
-// What states I lived in question
+// Global variable
+var rightAnswer = "Right!";
+var wrongAnswer = "Wrong!";
 
-function statesILived() {
-    var question = prompt("Please name one state that I lived in");
-    var lowCase = question.toLowerCase();
-    var states = ["minnesota", "michigan", "illinois", "oregon"];
-    var printFeedback = document.getElementById("statesQ");
-
-    
-    if(states.includes(lowCase)) {
-        printFeedback.innerHTML="good";
-    } else {
-        printFeedback.innerHTML="wrong";
-
-    }
-    
-}
-
-
-
+// Generic markup for the questions
 function genericFeedback(q, a, id) {
-    var rightAnswer = "Right!";
-    var wrongAnswer = "Wrong!";
     var question = prompt(q);
-    var toLowCase = question.toLowerCase();
-    var printFeedback = document.getElementById(id + "Q");
-    if (toLowCase == a) {
+    var printFeedback = document.getElementById(id);
+    if (question.toLowerCase() == a) {
         printFeedback.innerHTML=rightAnswer;
     } else {
     printFeedback.innerHTML=wrongAnswer;
     }
+}
+
+
+// What states I lived in question
+function statesILived() {
+    var question = prompt("Please name one state that I lived in");
+    var lowCase = question.toLowerCase();
+    var states = ["minnesota", "michigan", "illinois", "oregon"];
+    var printFeedback = document.getElementById("states");
+    
+    if(states.includes(lowCase)) {
+        printFeedback.innerHTML=rightAnswer;
+    } else {
+        printFeedback.innerHTML=wrongAnswer;
+    }
+    
 }

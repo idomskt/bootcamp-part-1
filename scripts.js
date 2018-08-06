@@ -56,8 +56,9 @@ function genericFeedback(q, a, id) {
     var printFeedback = document.getElementById(id);
     if (question.toLowerCase() == a) {
         printFeedback.innerHTML=rightAnswer;
+        rightAnswerCounter ++;
     } else {
-    printFeedback.innerHTML=wrongAnswer;
+        printFeedback.innerHTML=wrongAnswer;
     }
 }
 
@@ -71,8 +72,52 @@ function statesILived() {
     
     if(states.includes(lowCase)) {
         printFeedback.innerHTML=rightAnswer;
+        rightAnswerCounter ++;
     } else {
         printFeedback.innerHTML=wrongAnswer;
     }
     
+}
+
+// ============================== End of class-04 ====================================
+
+// ============================== Class 05 - Continue guessing game and forms ====================================
+
+function checkForm(a, inputID) {
+    var inputValue = document.getElementById(inputID).value;
+    var printFeedback = document.getElementById('print-' + inputID);
+    
+    if(inputValue.toLowerCase() == a) {
+        printFeedback.innerHTML=rightAnswer;
+        printFeedback.style.color="green";
+        printFeedback.innerHTML += "<img src='https://media.giphy.com/media/xT77XWum9yH7zNkFW0/giphy.gif'>";
+        rightAnswerCounter++;
+    } else {
+        printFeedback.innerHTML=wrongAnswer;
+        printFeedback.style.color="red";
+        printFeedback.innerHTML += "<img src='https://media.giphy.com/media/pVAMI8QYM42n6/giphy.gif'>";
+    }
+}
+
+
+function checkMultiOptions(inputValue) {
+    var statesILived = ['oregon', 'minnesota', 'illinois', 'michigan', 'or', 'il', 'mi', 'mn'];
+    var userAnswer = document.getElementById(inputValue).value;
+    var printFeedback = document.getElementById('print-' + inputValue);
+    
+    if(statesILived.includes(userAnswer.toLowerCase())) {
+        printFeedback.innerHTML=rightAnswer;
+        printFeedback.style.color="green";
+        printFeedback.innerHTML += "<img src='https://media.giphy.com/media/xT77XWum9yH7zNkFW0/giphy.gif'>";
+        rightAnswerCounter++;
+    } else {
+        printFeedback.innerHTML=wrongAnswer;
+        printFeedback.style.color="red";
+        printFeedback.innerHTML += "<img src='https://media.giphy.com/media/pVAMI8QYM42n6/giphy.gif'>";
+    }
+}
+
+
+function calScore() {
+    document.getElementById('checkScore').innerHTML="You answered " + rightAnswerCounter + " right questions!";
 }

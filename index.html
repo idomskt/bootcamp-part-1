@@ -12,7 +12,7 @@
 <body>
     <header class="outer">
         <div class="inner">
-            <div class="logo"><h2>Ido Moskovits</h2></div>
+            <div class="logo"><strong>Ido Moskovits</strong></div>
             <div class="menu">
                 <nav>
                     <ul>
@@ -122,23 +122,30 @@
                 <h2>Start The Quiz!</h2>
                 <div class="quizQues">
                     <div class="question">
-                        <button onclick="genericFeedback('Which country I was born in?', 'israel', 'Israel')">Which country I was born in?</button>
-                        <p id="Israel"></p>
+                        <p>Which country I was born in?</p>
+                        <input type="text" id="homeCountry">
+                        <button onclick="checkForm('israel', 'homeCountry')">Check</button>
+                        <p>Your answer is <span id="print-homeCountry"></span></p>
                     </div>
+                    
                     <div class="question">
-                        <button onclick="genericFeedback('is my dog name Cookie?','yes','cookie')">Is my dog name Cookie?</button>
-                        <p id="cookie"></p>
+                        <p>Name one state I lived in</p>
+                        <input type="text" id="statesILivedIn">
+                        <button onclick="checkMultiOptions('statesILivedIn')">Check</button>
+                        <p>Your answer is <span id="print-statesILivedIn"></span></p>
                     </div>
+                    
                     <div class="question">
-                        <button onclick="genericFeedback('choose a number between 1 to 20', '8', 'randomNumber')">Choose a number between 1 - 20</button>
-                        <p id="randomNumber"></p>
+                        <p>Choose a number between 1-20</p>
+                       <input type="number" id="chooseANumber">
+                        <button onclick="checkForm('8', 'chooseANumber')">Check</button>
+                        <p>Your answer is <span id="print-chooseANumber"></span></p>
                     </div>
-                    <div class="question">
-                        <button onclick="statesILived()">Name one state I was lived in</button>
-                        <p id="states"></p>
-                    </div>
+                
+
+
                 </div>
-                <button onclick="quizScore()">Check your score</button>
+                <p id="checkScore"><button onclick="calScore()">Check your score</button></p>
             </div>
         </div>
     </main>

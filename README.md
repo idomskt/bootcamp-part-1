@@ -1,5 +1,5 @@
 ## User Stories
-I've created 3 questions for the quiz. Each answer gives a right or wrong feedback based on the user's answer. After each right answer Iv'e increase the right answer counter by one to track the right answer.
+In this branch I have 3 questions. For the first question there is only one possible answer. The second question is an array with multiple possible answers and the third question will only accept numbers. I wrote all the scripts since the beginning in one JS file with long line comments seperators to divide it by class number.
 
 ## Github Branches
-Iv'e added, commited and pushed everything to the new branch on Github.
+Iv'e created a GH-Pages branch so it will be accecible online.

@@ -19,6 +19,7 @@ function petQuiz() {
     var answer = "yes";
     var shortAnswer = answer.charAt(0);
     var question = prompt("Does my dog name is Cookie?");
+    
     if((question.toLowerCase() == answer) || (question.toLowerCase() == shortAnswer)) {
         alert(rightFeedback);  
         rightAnswerCounter ++;
